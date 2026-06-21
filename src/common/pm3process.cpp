@@ -19,10 +19,12 @@ PM3Process::PM3Process(QThread* thread, QObject* parent): QProcess(parent)
 
 void PM3Process::connectPM3(const QString& path, const QStringList args)
 {
+    QString initialOutput;
     QString result;
-    Util::ClientType clientType;
+    Util::ClientType clientType = Util::CLIENTTYPE_ICEMAN;
     setRequiringOutput(true);
-	QRegularExpression osPattern("(os:\\s+|OS\\.+\\s+)");
+    QRegularExpression osPattern("^\\s*(?:os:|OS\\.+)\\s*([^\\r\\n]+)", QRegularExpression::MultilineOption);
+    QRegularExpression promptPattern("pm3\\s*-->|proxmark3\\s*>", QRegularExpression::CaseInsensitiveOption);
 
     // stash for reconnect
     currPath = path;
@@ -33,39 +35,44 @@ void PM3Process::connectPM3(const QString& path, const QStringList args)
     start(path, args, QProcess::Unbuffered | QProcess::ReadWrite);
     if(waitForStarted(10000))
     {
-        waitForReadyRead(10000);
+        for(int i = 0; i < 50; i++)
+        {
+            waitForReadyRead(200);
+            initialOutput = *requiredOutput;
+            if(promptPattern.match(initialOutput).hasMatch())
+                break;
+        }
         setRequiringOutput(false);
-        result = *requiredOutput;
-        if(result.contains("[=]"))
+        result = initialOutput;
+
+        if(result.contains("[=]") || result.contains("iceman", Qt::CaseInsensitive) || result.contains("RRG", Qt::CaseInsensitive))
         {
             clientType = Util::CLIENTTYPE_ICEMAN;
-            setRequiringOutput(true);
-            write("hw version\n");
-            for(int i = 0; i < 50; i++)
-            {
-                waitForReadyRead(200);
-                result += *requiredOutput;
-                // if(result.contains("os: "))
-                if(osPattern.match(result).hasMatch())
-                    break;
-            }
-            setRequiringOutput(false);
         }
         else
         {
             clientType = Util::CLIENTTYPE_OFFICIAL;
         }
-        // if(result.contains("os: ")) // make sure the PM3 is connected
-		if(osPattern.match(result).hasMatch())
+
+        if(!osPattern.match(result).hasMatch())
+        {
+            setRequiringOutput(true);
+            write("hw version\n");
+            for(int i = 0; i < 100; i++)
+            {
+                waitForReadyRead(200);
+                result = initialOutput + *requiredOutput;
+                if(osPattern.match(result).hasMatch())
+                    break;
+            }
+            setRequiringOutput(false);
+        }
+
+        QRegularExpressionMatch osMatch = osPattern.match(result);
+        if(osMatch.hasMatch())
         {
             emit changeClientType(clientType);
-            // result = result.mid(result.indexOf("os: "));
-			QRegularExpressionMatch osMatch = osPattern.match(result);
-			result = result.mid(osMatch.capturedStart());
-            result = result.left(result.indexOf("\n"));
-            // result = result.mid(4, result.indexOf(" ", 4) - 4);
-			result = result.mid(osMatch.capturedLength(), result.indexOf(" ", osMatch.capturedLength()) - osMatch.capturedLength());
-            emit PM3StatedChanged(true, result);
+            emit PM3StatedChanged(true, osMatch.captured(1).trimmed());
         }
         else
         {

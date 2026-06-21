@@ -1,6 +1,17 @@
 # Change Log
 
+### V0.2.16
++ Fix FM11RF08S helper launch to use the selected client and serial port
++ Confirm restore, Gen2 wipe, and permanent UFUID lock operations
++ Keep the UID parameter dialog open when validation fails
++ Clarify that the Magic Card panel targets Gen2 CUID/FUID/UFUID cards
+
 [中文](doc/CHANGELOG/CHANGELOG_zh_CN.md)  
+
+### V0.2.9
++ Add built-in config for Iceman/RRG repo v4.21611
++ Improve connection detection for recent RRG clients and parse `hw version` OS lines more reliably
++ Add quick MIFARE Classic entries for RRG `fchk`, `autopwn`, and `isen`
 
 ### V0.2.8
 + Add support for Iceman/RRG repo v4.16717  

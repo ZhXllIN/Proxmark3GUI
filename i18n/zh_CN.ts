@@ -102,6 +102,16 @@
         <source>Set Parameter</source>
         <translation>设置卡参数</translation>
     </message>
+    <message>
+        <location filename="../src/ui/mf_uid_parameterdialog.cpp" line="36"/>
+        <source>Info</source>
+        <translation type="unfinished">信息</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mf_uid_parameterdialog.cpp" line="36"/>
+        <source>UID/ATQA/SAK format is invalid.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MF_trailerDecoderDialog</name>
@@ -302,13 +312,13 @@ It could make the whole sector blocked irreversibly!</source>
     </message>
     <message>
         <location filename="../src/ui/mainwindow.ui" line="496"/>
-        <location filename="../src/ui/mainwindow.ui" line="1202"/>
+        <location filename="../src/ui/mainwindow.ui" line="1228"/>
         <source>Load</source>
         <translation>加载</translation>
     </message>
     <message>
         <location filename="../src/ui/mainwindow.ui" line="509"/>
-        <location filename="../src/ui/mainwindow.ui" line="1215"/>
+        <location filename="../src/ui/mainwindow.ui" line="1241"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
@@ -329,111 +339,109 @@ It could make the whole sector blocked irreversibly!</source>
         <translation>破解</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="583"/>
+        <location filename="../src/ui/mainwindow.ui" line="570"/>
         <source>Card Info</source>
         <translation>读卡信息</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="596"/>
+        <location filename="../src/ui/mainwindow.ui" line="583"/>
         <source>Check Default</source>
         <translation>验证默认密码</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="609"/>
+        <location filename="../src/ui/mainwindow.ui" line="648"/>
         <source>Nested</source>
         <translation>Nested攻击</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="622"/>
+        <location filename="../src/ui/mainwindow.ui" line="661"/>
         <source>Hardnested</source>
-        <translation>Hardested攻击</translation>
+        <translation>Hardnested攻击</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="635"/>
+        <location filename="../src/ui/mainwindow.ui" line="674"/>
         <source>Darkside</source>
         <translation>Darkside攻击</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="660"/>
+        <location filename="../src/ui/mainwindow.ui" line="686"/>
         <source>Read/Write</source>
         <translation>读/写</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="673"/>
+        <location filename="../src/ui/mainwindow.ui" line="699"/>
         <source>Block:</source>
         <translation>块：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="705"/>
+        <location filename="../src/ui/mainwindow.ui" line="731"/>
         <source>Key:</source>
         <translation>密钥：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="724"/>
+        <location filename="../src/ui/mainwindow.ui" line="750"/>
         <source>Key Type:</source>
         <translation>密钥类型：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1189"/>
+        <location filename="../src/ui/mainwindow.ui" line="1215"/>
         <source>List Data</source>
         <translation>列出嗅探数据</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="747"/>
-        <location filename="../src/ui/mainwindow.ui" line="2403"/>
+        <location filename="../src/ui/mainwindow.ui" line="773"/>
+        <location filename="../src/ui/mainwindow.ui" line="2429"/>
         <source>Data:</source>
         <translation>数据：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="769"/>
+        <location filename="../src/ui/mainwindow.ui" line="795"/>
         <source>Normal(Require Password)</source>
         <translation>普通卡（需要密码）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="851"/>
+        <location filename="../src/ui/mainwindow.ui" line="877"/>
         <source>Dump</source>
         <translation>Dump命令</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="870"/>
+        <location filename="../src/ui/mainwindow.ui" line="896"/>
         <source>Restore</source>
         <translation>Restore命令</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="880"/>
         <source>Chinese Magic Card(Without Password)</source>
-        <translation>UID卡（不需要密码）</translation>
+        <translation type="vanished">UID卡（不需要密码）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="901"/>
+        <location filename="../src/ui/mainwindow.ui" line="927"/>
         <source>Lock UFUID Card</source>
         <translation>锁定UFUID卡</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="914"/>
-        <location filename="../src/ui/mainwindow.cpp" line="916"/>
+        <location filename="../src/ui/mainwindow.ui" line="940"/>
+        <location filename="../src/ui/mainwindow.cpp" line="985"/>
         <source>About UID Card</source>
         <translation>关于UID卡</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="985"/>
+        <location filename="../src/ui/mainwindow.ui" line="1011"/>
         <source>Set Parameter</source>
         <translation>设置卡参数</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1004"/>
         <source>Wipe</source>
-        <translation>擦除</translation>
+        <translation type="vanished">擦除</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1030"/>
-        <location filename="../src/ui/mainwindow.ui" line="1106"/>
+        <location filename="../src/ui/mainwindow.ui" line="1056"/>
+        <location filename="../src/ui/mainwindow.ui" line="1132"/>
         <source>Simulate</source>
         <translation>模拟</translation>
     </message>
     <message>
         <location filename="../src/ui/mainwindow.ui" line="522"/>
-        <location filename="../src/ui/mainwindow.ui" line="1093"/>
+        <location filename="../src/ui/mainwindow.ui" line="1119"/>
         <source>Clear</source>
         <translation>清空</translation>
     </message>
@@ -478,114 +486,144 @@ It could make the whole sector blocked irreversibly!</source>
         <translation>Trailer解码</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="793"/>
-        <location filename="../src/ui/mainwindow.ui" line="927"/>
-        <source>Read One</source>
-        <translation>读取单个块</translation>
+        <location filename="../src/ui/mainwindow.ui" line="596"/>
+        <source>Fast Check</source>
+        <translation>快速验证</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="806"/>
-        <location filename="../src/ui/mainwindow.ui" line="940"/>
-        <source>Write One</source>
-        <translation>写入单个块</translation>
+        <location filename="../src/ui/mainwindow.ui" line="609"/>
+        <source>AutoPWN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="622"/>
+        <source>ISEN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="635"/>
+        <source>FM11RF08S</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/mainwindow.ui" line="819"/>
         <location filename="../src/ui/mainwindow.ui" line="953"/>
-        <location filename="../src/ui/mainwindow.ui" line="1080"/>
-        <source>Read Selected</source>
-        <translation>读取选中块</translation>
+        <source>Read One</source>
+        <translation>读取单个块</translation>
     </message>
     <message>
         <location filename="../src/ui/mainwindow.ui" line="832"/>
         <location filename="../src/ui/mainwindow.ui" line="966"/>
-        <location filename="../src/ui/mainwindow.ui" line="1067"/>
+        <source>Write One</source>
+        <translation>写入单个块</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="845"/>
+        <location filename="../src/ui/mainwindow.ui" line="979"/>
+        <location filename="../src/ui/mainwindow.ui" line="1106"/>
+        <source>Read Selected</source>
+        <translation>读取选中块</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="858"/>
+        <location filename="../src/ui/mainwindow.ui" line="992"/>
+        <location filename="../src/ui/mainwindow.ui" line="1093"/>
         <source>Write Selected</source>
         <translation>写入选中块</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1129"/>
-        <location filename="../src/ui/mainwindow.ui" line="1163"/>
-        <location filename="../src/ui/mainwindow.ui" line="1800"/>
+        <location filename="../src/ui/mainwindow.ui" line="906"/>
+        <source>Gen2 Magic Card (CUID/FUID/UFUID)</source>
+        <translation>Gen2 魔术卡（CUID/FUID/UFUID）</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="1030"/>
+        <source>Wipe Gen2</source>
+        <translation>擦除 Gen2</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.ui" line="1155"/>
+        <location filename="../src/ui/mainwindow.ui" line="1189"/>
+        <location filename="../src/ui/mainwindow.ui" line="1826"/>
         <source>Sniff</source>
         <translation>嗅探</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1176"/>
+        <location filename="../src/ui/mainwindow.ui" line="1202"/>
         <source>Sniff(14a)</source>
         <translation>嗅探(14a)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1252"/>
+        <location filename="../src/ui/mainwindow.ui" line="1278"/>
         <source>LF Config</source>
         <translation>低频配置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1273"/>
+        <location filename="../src/ui/mainwindow.ui" line="1299"/>
         <source>Frequency</source>
         <translation>频率</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1396"/>
+        <location filename="../src/ui/mainwindow.ui" line="1422"/>
         <source>You might need a modified LF antenna if the freq is not 125k/134k.
 When setting the freq, the &quot;hw setlfdivisor&quot; will also be called.</source>
         <translation>如果频率不为125k/134k，则原装天线可能不适用。
 设置频率后GUI会使用&quot;hw setlfdivisor&quot;改变底层分频系数。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1427"/>
+        <location filename="../src/ui/mainwindow.ui" line="1453"/>
         <source>Bits per sample:</source>
         <translation>采样精度(Bits per sample)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1434"/>
+        <location filename="../src/ui/mainwindow.ui" line="1460"/>
         <source>Decimation:</source>
         <translation>抽取(Decimation)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1451"/>
+        <location filename="../src/ui/mainwindow.ui" line="1477"/>
         <source>Averaging:</source>
         <translation>平均化(Averaging)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1576"/>
+        <location filename="../src/ui/mainwindow.ui" line="1602"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1601"/>
+        <location filename="../src/ui/mainwindow.ui" line="1627"/>
         <source>LF Operation</source>
         <translation>低频操作</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1626"/>
+        <location filename="../src/ui/mainwindow.ui" line="1652"/>
         <source>Search</source>
         <translation>搜索</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1657"/>
+        <location filename="../src/ui/mainwindow.ui" line="1683"/>
         <source>Read and search for valid known tag.</source>
         <translation>读卡并寻找已知类型的卡</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1683"/>
+        <location filename="../src/ui/mainwindow.ui" line="1709"/>
         <source>Read</source>
         <translation>读取</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1714"/>
+        <location filename="../src/ui/mainwindow.ui" line="1740"/>
         <source>Sniff low frequency signal with LF field ON.
 Use this to get raw data from a tag.</source>
         <translation>激活低频电磁场并读取原始信号。
 该功能用于获取卡片原始数据。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1741"/>
+        <location filename="../src/ui/mainwindow.ui" line="1767"/>
         <source>Tune</source>
         <translation>调谐</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1772"/>
+        <location filename="../src/ui/mainwindow.ui" line="1798"/>
         <source>Measure LF antenna tuning.
 If the antenna voltage has a obvious drop after putting card on the antenna, it is likely that the tag is a LF tag.
 On Iceman/RRG repo, press the button on PM3 to stop measuring</source>
@@ -594,7 +632,7 @@ On Iceman/RRG repo, press the button on PM3 to stop measuring</source>
 在冰人版固件下，如果需要停止测量，请按下PM3侧面的按钮</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1831"/>
+        <location filename="../src/ui/mainwindow.ui" line="1857"/>
         <source>Sniff low frequency signal with LF field OFF.
 Use this to get raw data from a reader 
 or the communication between a tag and a reader.</source>
@@ -603,699 +641,755 @@ or the communication between a tag and a reader.</source>
 或者卡片与读卡器的交互过程。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1883"/>
-        <location filename="../src/ui/mainwindow.cpp" line="48"/>
+        <location filename="../src/ui/mainwindow.ui" line="1909"/>
+        <location filename="../src/ui/mainwindow.cpp" line="49"/>
         <source>T55xx</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1895"/>
+        <location filename="../src/ui/mainwindow.ui" line="1921"/>
         <source>Basic Configuration(Page 0 Block 0)</source>
         <translation>基本配置区(页0 块0)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1909"/>
-        <location filename="../src/ui/mainwindow.ui" line="2185"/>
+        <location filename="../src/ui/mainwindow.ui" line="1935"/>
+        <location filename="../src/ui/mainwindow.ui" line="2211"/>
         <source>Hex:</source>
         <translation>16进制：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1916"/>
-        <location filename="../src/ui/mainwindow.ui" line="2192"/>
+        <location filename="../src/ui/mainwindow.ui" line="1942"/>
+        <location filename="../src/ui/mainwindow.ui" line="2218"/>
         <source>Bin:</source>
         <translation>2进制：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1960"/>
-        <location filename="../src/ui/mainwindow.ui" line="2236"/>
+        <location filename="../src/ui/mainwindow.ui" line="1986"/>
+        <location filename="../src/ui/mainwindow.ui" line="2262"/>
         <source>Get from Data</source>
         <translation>从数据区导入</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1967"/>
-        <location filename="../src/ui/mainwindow.ui" line="2243"/>
+        <location filename="../src/ui/mainwindow.ui" line="1993"/>
+        <location filename="../src/ui/mainwindow.ui" line="2269"/>
         <source>Set to Data</source>
         <translation>导出到数据区</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1997"/>
-        <location filename="../src/ui/mainwindow.ui" line="2276"/>
+        <location filename="../src/ui/mainwindow.ui" line="2023"/>
+        <location filename="../src/ui/mainwindow.ui" line="2302"/>
         <source>Locked:</source>
         <translation>锁定(Locked)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2007"/>
+        <location filename="../src/ui/mainwindow.ui" line="2033"/>
         <source>Master Key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2014"/>
+        <location filename="../src/ui/mainwindow.ui" line="2040"/>
         <source>Data Bit Rate:</source>
         <translation>数据比特率(Data Bit Rate)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2024"/>
+        <location filename="../src/ui/mainwindow.ui" line="2050"/>
         <source>eXtended Mode:</source>
         <translation>扩展模式(eXtended Mode)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2031"/>
-        <location filename="../src/ui/mainwindow.ui" line="2430"/>
+        <location filename="../src/ui/mainwindow.ui" line="2057"/>
+        <location filename="../src/ui/mainwindow.ui" line="2456"/>
         <source>Modulation:</source>
         <translation>调制方式(Modulation)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2038"/>
+        <location filename="../src/ui/mainwindow.ui" line="2064"/>
         <source>PSK Clock Freq:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2045"/>
+        <location filename="../src/ui/mainwindow.ui" line="2071"/>
         <source>Answer on Request:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2058"/>
+        <location filename="../src/ui/mainwindow.ui" line="2084"/>
         <source>One Time Pad:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2065"/>
+        <location filename="../src/ui/mainwindow.ui" line="2091"/>
         <source>Max Block:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2072"/>
+        <location filename="../src/ui/mainwindow.ui" line="2098"/>
         <source>Password:</source>
         <translation>密码(Password):</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2079"/>
+        <location filename="../src/ui/mainwindow.ui" line="2105"/>
         <source>Seq. Terminator:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2086"/>
+        <location filename="../src/ui/mainwindow.ui" line="2112"/>
         <source>Seq. Start Marker:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2093"/>
+        <location filename="../src/ui/mainwindow.ui" line="2119"/>
         <source>Fast Downlink:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2100"/>
+        <location filename="../src/ui/mainwindow.ui" line="2126"/>
         <source>Inverse Data:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2107"/>
+        <location filename="../src/ui/mainwindow.ui" line="2133"/>
         <source>Init-Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2171"/>
+        <location filename="../src/ui/mainwindow.ui" line="2197"/>
         <source>Analog Front-End Option(Page 1 Block 3)</source>
         <translation>模拟前端选项区(页1 块3)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2286"/>
+        <location filename="../src/ui/mainwindow.ui" line="2312"/>
         <source>Option Key:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2296"/>
+        <location filename="../src/ui/mainwindow.ui" line="2322"/>
         <source>Soft Modulation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2306"/>
+        <location filename="../src/ui/mainwindow.ui" line="2332"/>
         <source>Clamp Voltage:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2316"/>
+        <location filename="../src/ui/mainwindow.ui" line="2342"/>
         <source>Modulation Voltage:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2326"/>
+        <location filename="../src/ui/mainwindow.ui" line="2352"/>
         <source>Clock Detection Threshold:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2336"/>
+        <location filename="../src/ui/mainwindow.ui" line="2362"/>
         <source>Gap Detection Threshold:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2346"/>
+        <location filename="../src/ui/mainwindow.ui" line="2372"/>
         <source>Write Dampling:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2353"/>
+        <location filename="../src/ui/mainwindow.ui" line="2379"/>
         <source>Demod Delay:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2360"/>
+        <location filename="../src/ui/mainwindow.ui" line="2386"/>
         <source>Downlink Protocol:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2422"/>
+        <location filename="../src/ui/mainwindow.ui" line="2448"/>
         <source>T55xx Read Config</source>
         <translation>T55xx读卡配置区</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2437"/>
+        <location filename="../src/ui/mainwindow.ui" line="2463"/>
         <source>Bit Rate:</source>
         <translation>比特率(Bit Rate)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2444"/>
+        <location filename="../src/ui/mainwindow.ui" line="2470"/>
         <source>Seq. Term.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2451"/>
+        <location filename="../src/ui/mainwindow.ui" line="2477"/>
         <source>Offset:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2458"/>
+        <location filename="../src/ui/mainwindow.ui" line="2484"/>
         <source>Inverted:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2492"/>
+        <location filename="../src/ui/mainwindow.ui" line="2518"/>
         <source>T5577</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2499"/>
+        <location filename="../src/ui/mainwindow.ui" line="2525"/>
         <source>T5555</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2523"/>
+        <location filename="../src/ui/mainwindow.ui" line="2549"/>
         <source>RawCommand</source>
         <translation>原始命令</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2570"/>
-        <location filename="../src/ui/mainwindow.cpp" line="360"/>
+        <location filename="../src/ui/mainwindow.ui" line="2596"/>
+        <location filename="../src/ui/mainwindow.cpp" line="361"/>
         <source>History:</source>
         <translation>命令历史：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2602"/>
+        <location filename="../src/ui/mainwindow.ui" line="2628"/>
         <source>ClearHistory</source>
         <translation>清空历史</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2625"/>
+        <location filename="../src/ui/mainwindow.ui" line="2651"/>
         <source>Send</source>
         <translation>发送</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2632"/>
+        <location filename="../src/ui/mainwindow.ui" line="2658"/>
         <source>ClearOutput</source>
         <translation>清空输出</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2642"/>
+        <location filename="../src/ui/mainwindow.ui" line="2668"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2689"/>
+        <location filename="../src/ui/mainwindow.ui" line="2715"/>
         <source>Client</source>
         <translation>客户端</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2695"/>
+        <location filename="../src/ui/mainwindow.ui" line="2721"/>
         <source>GUI working directory:</source>
         <translation>GUI工作路径：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2730"/>
+        <location filename="../src/ui/mainwindow.ui" line="2756"/>
         <source>If the client requires some enviroment variables, you can make a script file(*.bat on Windows or *.sh on Linux) to configure them, then put the path of the script there.
 The &quot;&lt;client dir&gt;&quot; will be replaced by the directory of the &quot;Client Path&quot;</source>
         <translation>如果客户端需要配置环境变量才能正常运行，可以将配置环境变量所需的脚本文件(Windows系统内为*.bat，linux系统内为*.sh)路径填入此处。
 当中的&lt;client dir&gt;会被替换为“客户端路径”所对应的父目录</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2755"/>
+        <location filename="../src/ui/mainwindow.ui" line="2781"/>
         <source>../data</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2786"/>
+        <location filename="../src/ui/mainwindow.ui" line="2812"/>
         <source>&lt;port&gt; -f</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2810"/>
+        <location filename="../src/ui/mainwindow.ui" line="2836"/>
         <source>Config file(Reconnect to apply):</source>
         <translation>配置文件(重连后生效)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2953"/>
+        <location filename="../src/ui/mainwindow.ui" line="2979"/>
         <source>UI</source>
         <translation>界面</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2961"/>
+        <location filename="../src/ui/mainwindow.ui" line="2987"/>
         <source>Language: </source>
         <translation>语言： </translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2968"/>
+        <location filename="../src/ui/mainwindow.ui" line="2994"/>
         <source>Choose Language</source>
         <translation>选择语言</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2975"/>
+        <location filename="../src/ui/mainwindow.ui" line="3001"/>
         <source>(Restart this app to use new language)</source>
         <translation>（重启此程序以使用新语言）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3012"/>
+        <location filename="../src/ui/mainwindow.ui" line="3038"/>
         <source>Opacity:</source>
         <translation>透明度：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3056"/>
+        <location filename="../src/ui/mainwindow.ui" line="3082"/>
         <source>Theme:</source>
         <translation>主题：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3073"/>
-        <location filename="../src/ui/mainwindow.ui" line="3114"/>
-        <location filename="../src/ui/mainwindow.ui" line="3148"/>
-        <location filename="../src/ui/mainwindow.ui" line="3182"/>
+        <location filename="../src/ui/mainwindow.ui" line="3099"/>
+        <location filename="../src/ui/mainwindow.ui" line="3140"/>
+        <location filename="../src/ui/mainwindow.ui" line="3174"/>
+        <location filename="../src/ui/mainwindow.ui" line="3208"/>
         <source>Set</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3080"/>
+        <location filename="../src/ui/mainwindow.ui" line="3106"/>
         <source>(Restart this app to use new theme)</source>
         <translation>（重启此程序以使用新主题）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3091"/>
+        <location filename="../src/ui/mainwindow.ui" line="3117"/>
         <source>Global Font:</source>
         <translation>全局字体：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3125"/>
+        <location filename="../src/ui/mainwindow.ui" line="3151"/>
         <source>Data Font:</source>
         <translation>数据字体：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3159"/>
+        <location filename="../src/ui/mainwindow.ui" line="3185"/>
         <source>Command Font:</source>
         <translation>命令字体：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3196"/>
+        <location filename="../src/ui/mainwindow.ui" line="3222"/>
         <source>Latest Release:</source>
         <translation>检查更新：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="3226"/>
+        <location filename="../src/ui/mainwindow.ui" line="3252"/>
         <source>Report Bugs:</source>
         <translation>反馈问题：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2892"/>
+        <location filename="../src/ui/mainwindow.ui" line="2918"/>
         <source>Keep buttons enabled even the client is running or disconnected</source>
         <translation>保持所有按钮可点击，即使未连接客户端或有任务正在运行</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1244"/>
+        <location filename="../src/ui/mainwindow.ui" line="1270"/>
         <source>LF</source>
         <translation>低频</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1331"/>
+        <location filename="../src/ui/mainwindow.ui" line="1357"/>
         <source>other</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1338"/>
+        <location filename="../src/ui/mainwindow.ui" line="1364"/>
         <source>Divisor:</source>
         <translation>分频系数(Divisor)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1358"/>
+        <location filename="../src/ui/mainwindow.ui" line="1384"/>
         <source>Actural Freq: 125.000kHz</source>
         <translation>实际频率： 125.000kHz</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1465"/>
+        <location filename="../src/ui/mainwindow.ui" line="1491"/>
         <source>Trigger threshold:</source>
         <translation>触发阈值(Trigger threshold)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1479"/>
+        <location filename="../src/ui/mainwindow.ui" line="1505"/>
         <source>Samples to skip:</source>
         <translation>跳过前n个采样(Samples to skip)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1550"/>
+        <location filename="../src/ui/mainwindow.ui" line="1576"/>
         <source>Get Config</source>
         <translation>获取当前配置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="1569"/>
+        <location filename="../src/ui/mainwindow.ui" line="1595"/>
         <source>Set Config</source>
         <translation>改变当前配置</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2716"/>
+        <location filename="../src/ui/mainwindow.ui" line="2742"/>
         <source>Preload script path(Reconnect to apply):</source>
         <translation>预加载脚本路径(重连后生效)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2748"/>
+        <location filename="../src/ui/mainwindow.ui" line="2774"/>
         <source>Client working directory(Reconnect to apply):</source>
         <translation>客户端工作路径(重连后生效)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2762"/>
+        <location filename="../src/ui/mainwindow.ui" line="2788"/>
         <source>On Windows, the client working directory should not be identical to the path of GUI, otherwise the client will use the wrong .dll file.</source>
         <translation>在Windows系统中，客户端工作路径与GUI程序所在路径不能相同，否则客户端会使用错误的.dll文件。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2779"/>
+        <location filename="../src/ui/mainwindow.ui" line="2805"/>
         <source>Start arguments(Reconnect to apply):</source>
         <translation>启动参数(重连后生效)：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2793"/>
+        <location filename="../src/ui/mainwindow.ui" line="2819"/>
         <source>-f is necessary because the GUI need to handle the output in time. In some cases, the arguments should be set to &quot;-p /dev/&lt;port&gt; -f&quot; or &quot;-p &lt;port&gt; -f&quot;.</source>
         <translation>-f选项用于使客户端实时返回命令回显，必须添加。部分情况下启动参数需设置为&quot;-p /dev/&lt;port&gt; -f&quot;或&quot;-p &lt;port&gt; -f&quot;。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2841"/>
+        <location filename="../src/ui/mainwindow.ui" line="2867"/>
         <source>config.json</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2848"/>
+        <location filename="../src/ui/mainwindow.ui" line="2874"/>
         <source>Different clients require different config files. You can change the content of config file if the command format changes.</source>
         <translation>不同客户端需要使用不同的配置文件。若命令格式发生改变，你可以尝试手动修改配置文件以适配。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.ui" line="2938"/>
+        <location filename="../src/ui/mainwindow.ui" line="2964"/>
         <source>Keep the client active even the PM3 hardware is disconnected.(Experimental)</source>
         <translation>在PM3断开后保持客户端运行（实验性功能）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="91"/>
-        <location filename="../src/ui/mainwindow.cpp" line="198"/>
-        <location filename="../src/ui/mainwindow.cpp" line="205"/>
-        <location filename="../src/ui/mainwindow.cpp" line="277"/>
-        <location filename="../src/ui/mainwindow.cpp" line="282"/>
-        <location filename="../src/ui/mainwindow.cpp" line="463"/>
-        <location filename="../src/ui/mainwindow.cpp" line="677"/>
-        <location filename="../src/ui/mainwindow.cpp" line="697"/>
-        <location filename="../src/ui/mainwindow.cpp" line="710"/>
-        <location filename="../src/ui/mainwindow.cpp" line="729"/>
-        <location filename="../src/ui/mainwindow.cpp" line="742"/>
-        <location filename="../src/ui/mainwindow.cpp" line="769"/>
-        <location filename="../src/ui/mainwindow.cpp" line="782"/>
-        <location filename="../src/ui/mainwindow.cpp" line="987"/>
-        <location filename="../src/ui/mainwindow.cpp" line="1028"/>
+        <location filename="../src/ui/mainwindow.cpp" line="92"/>
+        <location filename="../src/ui/mainwindow.cpp" line="199"/>
+        <location filename="../src/ui/mainwindow.cpp" line="206"/>
+        <location filename="../src/ui/mainwindow.cpp" line="278"/>
+        <location filename="../src/ui/mainwindow.cpp" line="283"/>
+        <location filename="../src/ui/mainwindow.cpp" line="464"/>
+        <location filename="../src/ui/mainwindow.cpp" line="678"/>
+        <location filename="../src/ui/mainwindow.cpp" line="698"/>
+        <location filename="../src/ui/mainwindow.cpp" line="711"/>
+        <location filename="../src/ui/mainwindow.cpp" line="730"/>
+        <location filename="../src/ui/mainwindow.cpp" line="743"/>
+        <location filename="../src/ui/mainwindow.cpp" line="770"/>
+        <location filename="../src/ui/mainwindow.cpp" line="783"/>
+        <location filename="../src/ui/mainwindow.cpp" line="843"/>
+        <location filename="../src/ui/mainwindow.cpp" line="854"/>
+        <location filename="../src/ui/mainwindow.cpp" line="861"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1062"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1103"/>
         <source>Info</source>
         <translation>信息</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="205"/>
+        <location filename="../src/ui/mainwindow.cpp" line="206"/>
         <source>Plz choose a port first</source>
         <translation>请先选择端口</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="293"/>
+        <location filename="../src/ui/mainwindow.cpp" line="294"/>
         <source>Connected</source>
         <translation>已连接</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="299"/>
-        <location filename="../src/ui/mainwindow.cpp" line="1113"/>
+        <location filename="../src/ui/mainwindow.cpp" line="300"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1188"/>
         <source>Not Connected</source>
         <translation>未连接</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="729"/>
-        <location filename="../src/ui/mainwindow.cpp" line="742"/>
-        <location filename="../src/ui/mainwindow.cpp" line="987"/>
+        <location filename="../src/ui/mainwindow.cpp" line="730"/>
+        <location filename="../src/ui/mainwindow.cpp" line="743"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1062"/>
         <source>Failed to open</source>
         <translation>无法打开</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="463"/>
+        <location filename="../src/ui/mainwindow.cpp" line="464"/>
         <source>Continue?</source>
         <translation>确定？</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="12"/>
+        <location filename="../src/ui/mainwindow.cpp" line="13"/>
         <source>Dock all windows</source>
         <translation>吸附所有悬浮窗口</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="14"/>
+        <location filename="../src/ui/mainwindow.cpp" line="15"/>
         <source>Ver: </source>
         <translation>版本： </translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="15"/>
+        <location filename="../src/ui/mainwindow.cpp" line="16"/>
         <source>Check Update</source>
         <translation>检查更新</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="91"/>
+        <location filename="../src/ui/mainwindow.cpp" line="92"/>
         <source>Failed to load config file</source>
         <translation>无法打开配置文件</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="277"/>
+        <location filename="../src/ui/mainwindow.cpp" line="278"/>
         <source>Failed to start the client</source>
         <translation>无法启动客户端</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="282"/>
+        <location filename="../src/ui/mainwindow.cpp" line="283"/>
         <source>Failed to connect to the hardware</source>
         <translation>无法连接到PM3硬件</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="463"/>
+        <location filename="../src/ui/mainwindow.cpp" line="464"/>
         <source>Some of the data and key will be cleared.</source>
         <translation>部分数据和密码将被清除</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="677"/>
+        <location filename="../src/ui/mainwindow.cpp" line="678"/>
         <source>Data must consists of 32 Hex symbols(Whitespace is allowed)</source>
         <translation>数据必须由32个十六进制字符组成（中间可含有空格）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="697"/>
-        <location filename="../src/ui/mainwindow.cpp" line="710"/>
+        <location filename="../src/ui/mainwindow.cpp" line="698"/>
+        <location filename="../src/ui/mainwindow.cpp" line="711"/>
         <source>Key must consists of 12 Hex symbols(Whitespace is allowed)</source>
         <translation>密钥必须由12个十六进制字符组成（中间可含有空格）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="722"/>
+        <location filename="../src/ui/mainwindow.cpp" line="723"/>
         <source>Plz select the data file:</source>
         <translation>请选择数据文件：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="723"/>
-        <location filename="../src/ui/mainwindow.cpp" line="763"/>
-        <location filename="../src/ui/mainwindow.cpp" line="767"/>
+        <location filename="../src/ui/mainwindow.cpp" line="724"/>
+        <location filename="../src/ui/mainwindow.cpp" line="764"/>
+        <location filename="../src/ui/mainwindow.cpp" line="768"/>
         <source>Binary Data Files(*.bin *.dump)</source>
         <translation>二进制数据文件(*.bin *.dump)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="723"/>
-        <location filename="../src/ui/mainwindow.cpp" line="736"/>
-        <location filename="../src/ui/mainwindow.cpp" line="974"/>
+        <location filename="../src/ui/mainwindow.cpp" line="724"/>
+        <location filename="../src/ui/mainwindow.cpp" line="737"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1049"/>
         <source>All Files(*.*)</source>
         <translation>所有文件(*.*)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="735"/>
+        <location filename="../src/ui/mainwindow.cpp" line="736"/>
         <source>Plz select the key file:</source>
         <translation>请选择密钥文件：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="762"/>
+        <location filename="../src/ui/mainwindow.cpp" line="763"/>
         <source>Plz select the location to save data file:</source>
         <translation>请选择数据文件保存的位置：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="769"/>
-        <location filename="../src/ui/mainwindow.cpp" line="782"/>
-        <location filename="../src/ui/mainwindow.cpp" line="1028"/>
+        <location filename="../src/ui/mainwindow.cpp" line="770"/>
+        <location filename="../src/ui/mainwindow.cpp" line="783"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1103"/>
         <source>Failed to save to</source>
         <translation>无法保存至</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="775"/>
+        <location filename="../src/ui/mainwindow.cpp" line="776"/>
         <source>Plz select the location to save key file:</source>
         <translation>请选择密钥文件保存的位置：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="736"/>
-        <location filename="../src/ui/mainwindow.cpp" line="776"/>
-        <location filename="../src/ui/mainwindow.cpp" line="780"/>
+        <location filename="../src/ui/mainwindow.cpp" line="737"/>
+        <location filename="../src/ui/mainwindow.cpp" line="777"/>
+        <location filename="../src/ui/mainwindow.cpp" line="781"/>
         <source>Binary Key Files(*.bin *.dump)</source>
         <translation>二进制密码文件(*.bin *.dump)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="198"/>
+        <location filename="../src/ui/mainwindow.cpp" line="199"/>
         <source>The client path is invalid</source>
         <translation>客户端路径无效</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="723"/>
-        <location filename="../src/ui/mainwindow.cpp" line="763"/>
+        <location filename="../src/ui/mainwindow.cpp" line="724"/>
+        <location filename="../src/ui/mainwindow.cpp" line="764"/>
         <source>Text Data Files(*.txt *.eml)</source>
         <translation>文本数据文件(*.txt *.eml)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="901"/>
+        <location filename="../src/ui/mainwindow.cpp" line="844"/>
+        <source>FM11RF08S recovery helper was not found:
+%1</source>
+        <translation>找不到 FM11RF08S 恢复助手：
+%1</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="855"/>
+        <source>Select a valid Proxmark3 port and client before starting FM11RF08S recovery.</source>
+        <translation>启动 FM11RF08S 恢复前，请选择有效的 Proxmark3 端口和客户端。</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="862"/>
+        <source>The GUI will disconnect from Proxmark3 and start the FM11RF08S recovery helper in a console window.
+Keep the card on the antenna until the console reports completion.</source>
+        <translation>GUI 将断开 Proxmark3，并在控制台窗口中启动 FM11RF08S 恢复助手。
+在控制台提示完成前，请保持卡片位于天线上。</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="921"/>
+        <source>Confirm restore</source>
+        <translation>确认恢复</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="922"/>
+        <source>Write every valid block currently shown in the data table to the card?</source>
+        <translation>将数据表中当前显示的全部有效块写入卡片吗？</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="960"/>
+        <source>Confirm wipe</source>
+        <translation>确认擦除</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="961"/>
+        <source>Wipe the Gen2 magic card and reset its keys and data? This cannot be undone.</source>
+        <translation>擦除 Gen2 魔术卡并重置密钥和数据吗？此操作无法撤销。</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="970"/>
         <source>    Normally, the Block 0 of a typical Mifare card, which contains the UID, is locked during the manufacture. Users cannot write anything to Block 0 or set a new UID to a normal Mifare card.</source>
         <translation>    普通Mifare卡的块0无法写入，卡号也不能更改</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="902"/>
+        <location filename="../src/ui/mainwindow.cpp" line="971"/>
         <source>    Chinese Magic Cards(aka UID Cards) are some special cards whose Block 0 are writeable. And you can change UID by writing to it.</source>
         <translation>    UID卡（在国外叫Chinese Magic Card）的块0可写，卡号可变。</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="904"/>
+        <location filename="../src/ui/mainwindow.cpp" line="973"/>
         <source>There are two versions of Chinese Magic Cards, the Gen1 and the Gen2.</source>
         <translation>国外把UID卡分为Chinese Magic Card Gen1和Gen2</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="905"/>
+        <location filename="../src/ui/mainwindow.cpp" line="974"/>
         <source>    Gen1:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="905"/>
         <source>    also called UID card in China. It responses to some backdoor commands so you can access any blocks without password. The Proxmark3 has a bunch of related commands(csetblk, cgetblk, ...) to deal with this type of card, and my GUI also support these commands.</source>
-        <translation>    指通常所说的UID卡，可以通过后门指令直接读写块而无需密码，在PM3和此GUI中有特殊命令处理这类卡片</translation>
+        <translation type="vanished">    指通常所说的UID卡，可以通过后门指令直接读写块而无需密码，在PM3和此GUI中有特殊命令处理这类卡片</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="906"/>
+        <location filename="../src/ui/mainwindow.cpp" line="975"/>
         <source>    Gen2:</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="906"/>
+        <location filename="../src/ui/mainwindow.cpp" line="975"/>
         <source>    doesn&apos;t response to the backdoor commands, which means that a reader cannot detect whether it is a Chinese Magic Card or not by sending backdoor commands.</source>
         <translation>    这个叫法在国内比较罕见，在国外指CUID/FUID/UFUID这类对后门指令不响应的卡（防火墙卡）</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="908"/>
+        <location filename="../src/ui/mainwindow.cpp" line="977"/>
         <source>There are some types of Chinese Magic Card Gen2.</source>
         <translation>以下是Gen2卡的详细介绍</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="909"/>
+        <location filename="../src/ui/mainwindow.cpp" line="978"/>
         <source>    CUID Card:</source>
         <translation>    CUID卡：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="909"/>
+        <location filename="../src/ui/mainwindow.cpp" line="978"/>
         <source>    the Block 0 is writeable, you can write to this block repeatedly by normal wrbl command.</source>
         <translation>    可通过普通的写块命令来写块0，可重复擦写</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="910"/>
+        <location filename="../src/ui/mainwindow.cpp" line="979"/>
         <source>    (hf mf wrbl 0 A FFFFFFFFFFFF &lt;the data you want to write&gt;)</source>
         <translation>    (hf mf wrbl 0 A FFFFFFFFFFFF &lt;待写入数据&gt;)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="911"/>
+        <location filename="../src/ui/mainwindow.cpp" line="980"/>
         <source>    FUID Card:</source>
         <translation>    FUID卡：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="911"/>
+        <location filename="../src/ui/mainwindow.cpp" line="980"/>
         <source>    you can only write to Block 0 once. After that, it seems like a typical Mifare card(Block 0 cannot be written to).</source>
         <translation>    块0只能写入一次</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="912"/>
+        <location filename="../src/ui/mainwindow.cpp" line="981"/>
         <source>    (some readers might try changing the Block 0, which could detect the CUID Card. In that case, you should use FUID card.)</source>
         <translation>    (更高级的穿防火墙卡，可以过一些能识别出CUID卡的读卡器)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="913"/>
+        <location filename="../src/ui/mainwindow.cpp" line="982"/>
         <source>    UFUID Card:</source>
         <translation>    UFUID卡：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="913"/>
+        <location filename="../src/ui/mainwindow.cpp" line="982"/>
         <source>    It behaves like a CUID card(or UID card? I&apos;m not sure) before you send some special command to lock it. Once it is locked, you cannot change its Block 0(just like a typical Mifare card).</source>
         <translation>    锁卡前和普通UID/CUID卡一样可以反复读写块0，用特殊命令锁卡后就和FUID卡一样了</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="915"/>
+        <location filename="../src/ui/mainwindow.cpp" line="984"/>
         <source>    Seemingly, these Chinese Magic Cards are more easily to be compromised by Nested Attack(it takes little time to get an unknown key).</source>
         <translation>    所有UID卡都似乎更容易被Nested攻击破解</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="973"/>
+        <location filename="../src/ui/mainwindow.cpp" line="997"/>
+        <source>Permanently lock UFUID card</source>
+        <translation>永久锁定 UFUID 卡</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="998"/>
+        <source>Only continue when the card is an unlocked UFUID/USCUID card and its data has been verified. Locking Block 0 is permanent.</source>
+        <translation>仅当卡片是未锁定的 UFUID/USCUID 卡且数据已经验证时继续。锁定 0 块是永久操作。</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="1048"/>
         <source>Plz select the trace file:</source>
         <translation>请选择trace文件：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="974"/>
-        <location filename="../src/ui/mainwindow.cpp" line="1011"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1049"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1086"/>
         <source>Trace Files</source>
         <translation>Trace文件</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1010"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1085"/>
         <source>Plz select the location to save trace file:</source>
         <translation>请选择trace文件保存的位置：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1138"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1213"/>
         <source>(None)</source>
         <translation>(无)</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1139"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1214"/>
         <source>Dark</source>
         <translation>暗黑</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1140"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1215"/>
         <source>Light</source>
         <translation>明亮</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1201"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1276"/>
         <source>External file</source>
         <translation>外部文件</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1114"/>
-        <location filename="../src/ui/mainwindow.cpp" line="1371"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1189"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1446"/>
         <source>Idle</source>
         <translation>空闲</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1116"/>
+        <location filename="../src/ui/mainwindow.cpp" line="974"/>
+        <source>    also called UID card in China. It responds to backdoor commands. This panel is not configured for Gen1 commands; use the Raw command tab for cgetblk/csetblk operations.</source>
+        <translation>    在中国也称为 UID 卡，会响应后门命令。本面板未配置 Gen1 命令；请在原始命令标签页中使用 cgetblk/csetblk。</translation>
+    </message>
+    <message>
+        <location filename="../src/ui/mainwindow.cpp" line="1191"/>
         <source>Stop</source>
         <translation>停止</translation>
     </message>
@@ -1321,27 +1415,27 @@ The &quot;&lt;client dir&gt;&quot; will be replaced by the directory of the &quo
         <translation>密钥B</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1308"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1383"/>
         <source>HW Version:</source>
         <translation>固件版本：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1310"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1385"/>
         <source>PM3:</source>
         <translation>连接状态：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1312"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1387"/>
         <source>State:</source>
         <translation>运行状态：</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1367"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1442"/>
         <source>Running</source>
         <translation>正在运行</translation>
     </message>
     <message>
-        <location filename="../src/ui/mainwindow.cpp" line="1555"/>
+        <location filename="../src/ui/mainwindow.cpp" line="1630"/>
         <source>Actural Freq: </source>
         <translation>实际频率： </translation>
     </message>
@@ -1349,35 +1443,45 @@ The &quot;&lt;client dir&gt;&quot; will be replaced by the directory of the &quo
 <context>
     <name>Mifare</name>
     <message>
-        <location filename="../src/module/mifare.cpp" line="650"/>
-        <location filename="../src/module/mifare.cpp" line="721"/>
+        <location filename="../src/module/mifare.cpp" line="722"/>
+        <location filename="../src/module/mifare.cpp" line="793"/>
         <source>Succeed!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="216"/>
-        <location filename="../src/module/mifare.cpp" line="650"/>
-        <location filename="../src/module/mifare.cpp" line="654"/>
-        <location filename="../src/module/mifare.cpp" line="678"/>
-        <location filename="../src/module/mifare.cpp" line="721"/>
-        <location filename="../src/module/mifare.cpp" line="734"/>
-        <location filename="../src/module/mifare.cpp" line="791"/>
+        <location filename="../src/module/mifare.cpp" line="180"/>
+        <location filename="../src/module/mifare.cpp" line="220"/>
+        <location filename="../src/module/mifare.cpp" line="235"/>
+        <location filename="../src/module/mifare.cpp" line="288"/>
+        <location filename="../src/module/mifare.cpp" line="722"/>
+        <location filename="../src/module/mifare.cpp" line="726"/>
+        <location filename="../src/module/mifare.cpp" line="750"/>
+        <location filename="../src/module/mifare.cpp" line="793"/>
+        <location filename="../src/module/mifare.cpp" line="806"/>
+        <location filename="../src/module/mifare.cpp" line="866"/>
         <source>Info</source>
         <translation>信息</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="216"/>
+        <location filename="../src/module/mifare.cpp" line="180"/>
+        <location filename="../src/module/mifare.cpp" line="220"/>
+        <location filename="../src/module/mifare.cpp" line="235"/>
+        <source>This config file does not support this command.</source>
+        <translation>当前配置文件不支持此命令。</translation>
+    </message>
+    <message>
+        <location filename="../src/module/mifare.cpp" line="288"/>
         <source>Plz provide at least one known key</source>
         <translation>请至少提供一个已知密码</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="475"/>
-        <location filename="../src/module/mifare.cpp" line="654"/>
+        <location filename="../src/module/mifare.cpp" line="547"/>
+        <location filename="../src/module/mifare.cpp" line="726"/>
         <source>Failed!</source>
         <translation>失败！</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="679"/>
+        <location filename="../src/module/mifare.cpp" line="751"/>
         <source>The Access Bits is invalid!
 It could make the whole sector blocked irreversibly!
 Continue to write?</source>
@@ -1386,17 +1490,17 @@ Continue to write?</source>
 确定要写入吗？</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="734"/>
+        <location filename="../src/module/mifare.cpp" line="806"/>
         <source>Failed to write to these blocks:</source>
         <translation>写入以下块失败：</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="738"/>
+        <location filename="../src/module/mifare.cpp" line="810"/>
         <source>Select them?</source>
         <translation>选中这些块？</translation>
     </message>
     <message>
-        <location filename="../src/module/mifare.cpp" line="791"/>
+        <location filename="../src/module/mifare.cpp" line="866"/>
         <source>Failed to read card.</source>
         <translation>读卡失败。</translation>
     </message>

@@ -3,6 +3,7 @@
 
 #include <QJsonDocument>
 #include <QDirIterator>
+#include <QFileInfo>
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent)
@@ -812,6 +813,64 @@ void MainWindow::on_MF_Attack_chkButton_clicked()
     setState(true);
 }
 
+void MainWindow::on_MF_Attack_fchkButton_clicked()
+{
+    setState(false);
+    mifare->fchk();
+    setState(true);
+}
+
+void MainWindow::on_MF_Attack_autopwnButton_clicked()
+{
+    setState(false);
+    mifare->autopwn();
+    setState(true);
+}
+
+void MainWindow::on_MF_Attack_isenButton_clicked()
+{
+    setState(false);
+    mifare->isen();
+    setState(true);
+}
+
+void MainWindow::on_MF_Attack_fm11rf08sButton_clicked()
+{
+    const QString scriptPath = QCoreApplication::applicationDirPath() + "/fm11rf08s/fm11rf08s_recovery_gui.bat";
+    QFileInfo script(scriptPath);
+    if(!script.exists())
+    {
+        QMessageBox::information(this, tr("Info"),
+                                 tr("FM11RF08S recovery helper was not found:\n%1").arg(QDir::toNativeSeparators(scriptPath)));
+        return;
+    }
+
+    QString port = ui->PM3_portBox->currentData().toString();
+    if(port.isEmpty())
+        port = ui->PM3_portBox->currentText().remove(" *").trimmed();
+    const QString clientPath = ui->PM3_pathBox->currentText();
+    if(port.isEmpty() || !QFileInfo::exists(clientPath))
+    {
+        QMessageBox::information(this, tr("Info"),
+                                 tr("Select a valid Proxmark3 port and client before starting FM11RF08S recovery."));
+        return;
+    }
+
+    on_PM3_disconnectButton_clicked();
+    setState(false);
+    QMessageBox::information(this, tr("Info"),
+                             tr("The GUI will disconnect from Proxmark3 and start the FM11RF08S recovery helper in a console window.\n"
+                                "Keep the card on the antenna until the console reports completion."));
+
+    QProcess::startDetached("cmd.exe",
+                            QStringList() << "/d" << "/c" << "start" << ""
+                                          << QDir::toNativeSeparators(scriptPath)
+                                          << QDir::toNativeSeparators(clientPath)
+                                          << port,
+                            script.absolutePath());
+    setState(true);
+}
+
 void MainWindow::on_MF_Attack_nestedButton_clicked()
 {
     setState(false);
@@ -859,7 +918,13 @@ void MainWindow::on_MF_RW_dumpButton_clicked()
 
 void MainWindow::on_MF_RW_restoreButton_clicked()
 {
+    if(QMessageBox::warning(this, tr("Confirm restore"),
+                            tr("Write every valid block currently shown in the data table to the card?"),
+                            QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes)
+        return;
+    setState(false);
     mifare->restore();
+    setState(true);
 }
 
 void MainWindow::on_MF_UID_readSelectedButton_clicked()
@@ -892,6 +957,10 @@ void MainWindow::on_MF_UID_writeBlockButton_clicked()
 
 void MainWindow::on_MF_UID_wipeButton_clicked()
 {
+    if(QMessageBox::warning(this, tr("Confirm wipe"),
+                            tr("Wipe the Gen2 magic card and reset its keys and data? This cannot be undone."),
+                            QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes)
+        return;
     mifare->wipeC();
 }
 
@@ -902,7 +971,7 @@ void MainWindow::on_MF_UID_aboutUIDButton_clicked()
     msg += tr("    Chinese Magic Cards(aka UID Cards) are some special cards whose Block 0 are writeable. And you can change UID by writing to it.") + "\n";
     msg += "\n";
     msg += tr("There are two versions of Chinese Magic Cards, the Gen1 and the Gen2.") + "\n";
-    msg += tr("    Gen1:") + "\n" + tr("    also called UID card in China. It responses to some backdoor commands so you can access any blocks without password. The Proxmark3 has a bunch of related commands(csetblk, cgetblk, ...) to deal with this type of card, and my GUI also support these commands.") + "\n";
+    msg += tr("    Gen1:") + "\n" + tr("    also called UID card in China. It responds to backdoor commands. This panel is not configured for Gen1 commands; use the Raw command tab for cgetblk/csetblk operations.") + "\n";
     msg += tr("    Gen2:") + "\n" + tr("    doesn't response to the backdoor commands, which means that a reader cannot detect whether it is a Chinese Magic Card or not by sending backdoor commands.") + "\n";
     msg += "\n";
     msg += tr("There are some types of Chinese Magic Card Gen2.") + "\n";
@@ -925,7 +994,13 @@ void MainWindow::on_MF_UID_setParaButton_clicked()
 
 void MainWindow::on_MF_UID_lockButton_clicked()
 {
+    if(QMessageBox::warning(this, tr("Permanently lock UFUID card"),
+                            tr("Only continue when the card is an unlocked UFUID/USCUID card and its data has been verified. Locking Block 0 is permanent."),
+                            QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes)
+        return;
+    setState(false);
     mifare->lockC();
+    setState(true);
 }
 
 void MainWindow::on_MF_Sim_readSelectedButton_clicked()

@@ -84,6 +84,14 @@ private slots:
 
     void on_MF_Attack_chkButton_clicked();
 
+    void on_MF_Attack_fchkButton_clicked();
+
+    void on_MF_Attack_autopwnButton_clicked();
+
+    void on_MF_Attack_isenButton_clicked();
+
+    void on_MF_Attack_fm11rf08sButton_clicked();
+
     void on_MF_Attack_nestedButton_clicked();
 
     void on_MF_Attack_hardnestedButton_clicked();

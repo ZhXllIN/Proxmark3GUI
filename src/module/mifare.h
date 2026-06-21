@@ -67,6 +67,9 @@ public:
 
     QMap<QString, QString> info(bool isRequiringOutput = false);
     void chk();
+    void fchk();
+    void autopwn();
+    void isen();
     void nested(bool isStaticNested = false);
     void darkside();
     void hardnested();
@@ -134,9 +137,9 @@ private:
     QRegularExpression* keyPattern;
     QString bin2text(const QByteArray& buff, int start, int length);
 
-    QString _readblk(int blockId, KeyType keyType, const QString& key, TargetType targetType = TARGET_MIFARE, int waitTime = 300);
-    QStringList _readsec(int sectorId, KeyType keyType, const QString& key, TargetType targetType = TARGET_MIFARE, int waitTime = 300);
-    bool _writeblk(int blockId, KeyType keyType, const QString& key, const QString& data, TargetType targetType = TARGET_MIFARE, int waitTime = 300);
+    QString _readblk(int blockId, KeyType keyType, const QString& key, TargetType targetType = TARGET_MIFARE, int waitTime = 1500);
+    QStringList _readsec(int sectorId, KeyType keyType, const QString& key, TargetType targetType = TARGET_MIFARE, int waitTime = 1500);
+    bool _writeblk(int blockId, KeyType keyType, const QString& key, const QString& data, TargetType targetType = TARGET_MIFARE, int waitTime = 1500);
 };
 
 #endif // MIFARE_H

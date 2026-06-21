@@ -167,6 +167,78 @@ void Mifare::chk()
     data_syncWithKeyWidget();
 }
 
+void Mifare::fchk()
+{
+    QRegularExpressionMatch reMatch;
+    QString result;
+    int offset = 0;
+    QString data;
+    QVariantMap config = configMap["fast check"].toMap();
+    QString cmd = config["cmd"].toString();
+    if(cmd.isEmpty())
+    {
+        QMessageBox::information(parent, tr("Info"), tr("This config file does not support this command."));
+        return;
+    }
+    int keyAindex = config["key A index"].toInt();
+    int keyBindex = config["key B index"].toInt();
+    QRegularExpression keyPattern = QRegularExpression(config["key pattern"].toString(), QRegularExpression::MultilineOption);
+    cmd.replace("<card type>", config["card type"].toMap()[cardType.typeText].toString());
+
+    result = util->execCMDWithOutput(
+                 cmd,
+                 Util::ReturnTrigger(1000 + cardType.sector_size * 200, {"No valid", keyPattern.pattern()}));
+    for(int i = 0; i < cardType.sector_size; i++)
+    {
+        reMatch = keyPattern.match(result, offset);
+        offset = reMatch.capturedStart();
+        if(reMatch.hasMatch())
+        {
+            data = reMatch.captured().toUpper();
+            offset += data.length();
+            QStringList cells = data.remove(" ").split("|");
+            if(!cells[keyAindex].contains(QRegularExpression("[^0-9a-fA-F]")))
+            {
+                keyAList->replace(i, cells[keyAindex]);
+            }
+            if(!cells[keyBindex].contains(QRegularExpression("[^0-9a-fA-F]")))
+            {
+                keyBList->replace(i, cells[keyBindex]);
+            }
+        }
+    }
+
+    data_syncWithKeyWidget();
+}
+
+void Mifare::autopwn()
+{
+    QVariantMap config = configMap["autopwn"].toMap();
+    QString cmd = config["cmd"].toString();
+    if(cmd.isEmpty())
+    {
+        QMessageBox::information(parent, tr("Info"), tr("This config file does not support this command."));
+        return;
+    }
+    if(cmd.contains("<card type>"))
+        cmd.replace("<card type>", config["card type"].toMap()[cardType.typeText].toString());
+    util->execCMD(cmd);
+    Util::gotoRawTab();
+}
+
+void Mifare::isen()
+{
+    QVariantMap config = configMap["static encrypted nonce info"].toMap();
+    QString cmd = config["cmd"].toString();
+    if(cmd.isEmpty())
+    {
+        QMessageBox::information(parent, tr("Info"), tr("This config file does not support this command."));
+        return;
+    }
+    util->execCMD(cmd);
+    Util::gotoRawTab();
+}
+
 void Mifare::nested(bool isStaticNested)
 {
     QVariantMap config = configMap["nested"].toMap();
@@ -764,12 +836,15 @@ void Mifare::dump()
 
 void Mifare::restore()
 {
-    QVariantMap config = configMap["restore"].toMap();
-    QString cmd = config["cmd"].toString();
-    if(cmd.contains("<card type>"))
-        cmd.replace("<card type>", config["card type"].toMap()[cardType.typeText].toString());
-    util->execCMD(cmd);
-    Util::gotoRawTab();
+    for(int i = 0; i < cardType.block_size; i++)
+    {
+        if(data_isDataValid(dataList->at(i)) == DATA_NOSPACE)
+            ui->MF_dataWidget->item(i, 1)->setCheckState(Qt::Checked);
+        else
+            ui->MF_dataWidget->item(i, 1)->setCheckState(Qt::Unchecked);
+    }
+    data_data2Key();
+    writeSelected(TARGET_MIFARE);
 }
 
 void Mifare::wipeC()
@@ -793,7 +868,8 @@ void Mifare::setParameterC()
     }
     else
     {
-        MF_UID_parameterDialog dialog(result["UID"].toUpper(), result["ATQA"].toUpper(), result["SAK"].toUpper(), config);
+        QString block0 = _readblk(0, KEY_A, "FFFFFFFFFFFF", TARGET_MIFARE, 1500);
+        MF_UID_parameterDialog dialog(result["UID"].toUpper(), result["ATQA"].toUpper(), result["SAK"].toUpper(), block0, config);
         connect(&dialog, &MF_UID_parameterDialog::sendCMD, util, &Util::execCMD);
         if(dialog.exec() == QDialog::Accepted)
             Util::gotoRawTab();
@@ -809,6 +885,7 @@ void Mifare::lockC()
     {
         qDebug() << cmd + item->toString();
         util->execCMD(cmd + item->toString());
+        util->delay(250);
     }
 }
 

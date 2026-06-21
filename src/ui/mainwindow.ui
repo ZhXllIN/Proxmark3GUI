@@ -551,27 +551,14 @@
             <property name="checkable">
              <bool>true</bool>
             </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <layout class="QGridLayout" name="MF_attackLayout">
              <property name="topMargin">
               <number>5</number>
              </property>
              <property name="bottomMargin">
               <number>5</number>
              </property>
-             <item>
-              <spacer name="horizontalSpacer">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
+             <item row="0" column="0">
               <widget class="QPushButton" name="MF_Attack_infoButton">
                <property name="minimumSize">
                 <size>
@@ -584,7 +571,7 @@
                </property>
               </widget>
              </item>
-             <item>
+             <item row="0" column="1">
               <widget class="QPushButton" name="MF_Attack_chkButton">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -597,7 +584,59 @@
                </property>
               </widget>
              </item>
-             <item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="MF_Attack_fchkButton">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Fast Check</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="MF_Attack_autopwnButton">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>AutoPWN</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QPushButton" name="MF_Attack_isenButton">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>ISEN</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="MF_Attack_fm11rf08sButton">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>FM11RF08S</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
               <widget class="QPushButton" name="MF_Attack_nestedButton">
                <property name="minimumSize">
                 <size>
@@ -610,7 +649,7 @@
                </property>
               </widget>
              </item>
-             <item>
+             <item row="1" column="2">
               <widget class="QPushButton" name="MF_Attack_hardnestedButton">
                <property name="minimumSize">
                 <size>
@@ -623,7 +662,7 @@
                </property>
               </widget>
              </item>
-             <item>
+             <item row="1" column="3">
               <widget class="QPushButton" name="MF_Attack_darksideButton">
                <property name="minimumSize">
                 <size>
@@ -635,19 +674,6 @@
                 <string>Darkside</string>
                </property>
               </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
              </item>
             </layout>
            </widget>
@@ -877,7 +903,7 @@
              <item>
               <widget class="QGroupBox" name="MF_UIDGroupBox">
                <property name="title">
-                <string>Chinese Magic Card(Without Password)</string>
+                <string>Gen2 Magic Card (CUID/FUID/UFUID)</string>
                </property>
                <property name="checkable">
                 <bool>true</bool>
@@ -1001,7 +1027,7 @@
                    </size>
                   </property>
                   <property name="text">
-                   <string>Wipe</string>
+                   <string>Wipe Gen2</string>
                   </property>
                  </widget>
                 </item>
@@ -3075,7 +3101,7 @@ The &quot;&lt;client dir&gt;&quot; will be replaced by the directory of the &quo
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLabel" name="label_17">
+                    <widget class="QLabel" name="Set_UI_themeRestartLabel">
                      <property name="text">
                       <string>(Restart this app to use new theme)</string>
                      </property>
