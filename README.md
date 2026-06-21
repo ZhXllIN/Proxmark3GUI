@@ -1,92 +1,86 @@
 # Proxmark3GUI for RRG v4.21611
 
-这是针对 [RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3) 固件和客户端命令格式适配的 Proxmark3GUI 修改版。
+[中文说明](README_zh_CN.md)
 
-本版本提供：
+This fork adapts Proxmark3GUI to the command formats used by [RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3).
 
-- 与 RRG/Iceman `v4.21611-145-g2bf48a02c` 固件匹配的 Windows 客户端
-- MIFARE Classic 常用读取、写入、擦除和模拟操作
-- `fchk`、`autopwn`、`isen` 和 FM11RF08S 恢复入口
-- Gen2 CUID/FUID/UFUID 写入、擦除和 UFUID 永久锁卡确认
-- 原始命令界面，可使用未制作成独立按钮的 RRG 客户端命令
+## Features
 
-## 兼容版本
+- Matching Windows client for RRG/Iceman `v4.21611-145-g2bf48a02c`
+- MIFARE Classic read, write, wipe, simulation, and access-bit tools
+- Quick entries for `fchk`, `autopwn`, `isen`, and FM11RF08S recovery
+- Gen2 CUID/FUID/UFUID write and wipe operations with confirmation prompts
+- Permanent UFUID lock confirmation
+- Raw command console for RRG commands without dedicated GUI controls
 
-配套组件必须保持一致：
+## Compatibility
 
-| 组件 | 版本 |
+| Component | Version |
 | --- | --- |
 | GUI | `Proxmark3GUI v0.2.16` |
-| Windows 客户端 | `v4.21611-145-g2bf48a02c` |
+| Windows client | `v4.21611-145-g2bf48a02c` |
 | Bootrom / OS | `v4.21611-145-g2bf48a02c` |
-| 源码校验值 | `c92e2128b` |
+| Source checksum | `c92e2128b` |
 
-固件包是为 **Proxmark3 RDV4、AT91SAM7S512（512 KB）** 编译的。不要刷入其他硬件型号。RRG 上游更新后，需要同时重新编译 Windows 客户端和固件；仅升级其中一项会再次出现版本不匹配警告。
+The firmware is built only for **Proxmark3 RDV4 with AT91SAM7S512 (512 KB)**. Do not flash it to a different model. The client and firmware must be updated together to avoid version mismatch warnings.
 
-## 下载
+## Download
 
-从 [Releases](https://github.com/ZhXllIN/Proxmark3GUI/releases/tag/v0.2.16-rrg-v4.21611) 下载：
+Download both ZIP files from [Release v0.2.16-rrg-v4.21611](https://github.com/ZhXllIN/Proxmark3GUI/releases/tag/v0.2.16-rrg-v4.21611):
 
 - `Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip`
 - `proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c.zip`
 
-文件校验值：
+SHA256:
 
 ```text
 056c39269ebcfcdd612583e5c8ee72ee180e7c2bfe625edfc02405b2489a7b5d  Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip
-d7be757cac71c6a21b8b56ddec40304314f8649ae34b4137d586b212104cc87b  proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c.zip
+1b2b6eb0b02c10581dfe4f0e45383849a0528e068c9c503762c7ebdb20940063  proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c.zip
 ```
 
-## 刷入固件
+## Flash Firmware on Windows
 
-以下步骤适用于 Windows PowerShell。
+1. Extract both ZIP files into the same parent folder.
+2. Open the extracted firmware folder and double-click `flash-pm3-rdv4.bat`.
+3. Enter the Proxmark3 COM port, confirm the hardware warning, and wait for verification to finish.
 
-1. 确认设备确实是 Proxmark3 RDV4、AT91SAM7S512。
-2. 完整解压 GUI ZIP 和固件 ZIP，不要直接在压缩包内运行文件。
-3. 连接 Proxmark3，关闭正在使用设备串口的 GUI 或其他客户端。
-4. 在设备管理器中确认串口号，例如 `COM5`。
-5. 在两个解压目录的共同父目录打开 PowerShell，执行下列命令。把 `COM5` 换成实际串口号。
+Expected layout:
 
-```powershell
-$gui = (Resolve-Path '.\Proxmark3GUI-v0.2.16-rrg-v4.21611-matched').Path
-$firmware = (Resolve-Path '.\proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c').Path
-$env:PATH = "$gui\client\libs;$env:PATH"
-
-& "$gui\client\proxmark3.exe" COM5 --flash --unlock-bootloader `
-  --image "$firmware\bootrom.elf" `
-  --image "$firmware\fullimage.elf"
+```text
+Downloads\
+|-- Proxmark3GUI-v0.2.16-rrg-v4.21611-matched\
+`-- proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c\
+    `-- flash-pm3-rdv4.bat
 ```
 
-刷写期间不要断开 USB。`--unlock-bootloader` 允许写入 Bootrom，只能用于确认匹配的 RDV4 固件。如果客户端无法让设备进入 Bootloader，请断开 USB，按住设备按钮重新连接，再执行同一命令。
+The script locates the matching Windows client, flashes `bootrom.elf` and `fullimage.elf`, then runs `hw version`. Do not disconnect USB while flashing. If the device cannot enter bootloader mode, disconnect USB, hold the Proxmark3 button while reconnecting, and run the script again.
 
-刷写完成后重新连接设备并验证版本：
+The script can also be run from Command Prompt with the port supplied directly:
 
-```powershell
-& "$gui\client\proxmark3.exe" COM5 -c 'hw version'
+```bat
+flash-pm3-rdv4.bat COM5
 ```
 
-客户端、Bootrom 和 OS 应全部显示 `v4.21611-145-g2bf48a02c`，且不应出现版本不匹配警告。
+Client, Bootrom, and OS should all report `v4.21611-145-g2bf48a02c` after flashing.
 
-## 使用 GUI
+## Use the GUI
 
-1. 完整解压 `Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip`。
-2. 双击 `启动Proxmark3GUI.bat`。
-3. 在 GUI 中选择设备串口并连接。
-4. MIFARE Classic 常用操作可直接使用对应页面；其他 RRG 命令可在原始命令页面执行。
+1. Fully extract `Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip`.
+2. Double-click `启动Proxmark3GUI.bat`.
+3. Select the device COM port and connect.
 
-发布包使用相对路径，已经包含匹配的 `proxmark3.exe`、运行库、资源、字典和 RRG v4.21611 配置。请保持压缩包内的目录结构，不要只复制 `Proxmark3GUI.exe`。
+The package contains the matching client, DLLs, resources, dictionaries, and RRG configuration. Keep the extracted directory structure intact. MIFARE Classic workflows are available from their GUI pages; other RRG commands remain available from the raw command console.
 
-## 操作提醒
+## Safety
 
-- 仅操作你拥有或明确获授权测试的卡片和系统。
-- 写入、擦除和永久锁卡前先保存卡片备份。
-- UFUID 永久锁卡不可逆，确认数据正确并验证可用后再执行。
-- 固件更新不会替代卡片数据备份。
+- Only test cards and systems that you own or are explicitly authorized to assess.
+- Back up a card before writing, wiping, or permanently locking it.
+- A permanent UFUID lock is irreversible.
 
-## 源码
+## Source
 
-- 本修改版：[ZhXllIN/Proxmark3GUI](https://github.com/ZhXllIN/Proxmark3GUI)
-- 原 GUI 项目：[wh201906/Proxmark3GUI](https://github.com/wh201906/Proxmark3GUI)
-- RRG 固件和客户端：[RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3)
+- Modified GUI: [ZhXllIN/Proxmark3GUI](https://github.com/ZhXllIN/Proxmark3GUI)
+- Original GUI: [wh201906/Proxmark3GUI](https://github.com/wh201906/Proxmark3GUI)
+- RRG client and firmware: [RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3)
 
-项目许可证见 [LICENSE](LICENSE)。
+See [LICENSE](LICENSE) for licensing information.
