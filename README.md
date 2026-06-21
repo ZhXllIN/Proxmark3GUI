@@ -1,100 +1,92 @@
-# Proxmark3GUI
-[![downloads](https://img.shields.io/github/downloads/wh201906/Proxmark3GUI/total?label=GitHub%20release%20downloads)](https://github.com/wh201906/Proxmark3GUI/releases)  
-[![downloads](https://img.shields.io/sourceforge/dt/proxmark3gui.svg?label=SourceForge%20downloads)](https://sourceforge.net/projects/proxmark3gui/)  
+# Proxmark3GUI for RRG v4.21611
 
-A cross-platform GUI for [Proxmark3](https://github.com/Proxmark/proxmark3)/[Proxmark3 Iceman fork](https://github.com/RfidResearchGroup/proxmark3) client  
+这是针对 [RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3) 固件和客户端命令格式适配的 Proxmark3GUI 修改版。
 
-(The [orignal Proxmark3 repo](https://github.com/Proxmark/proxmark3) has been unmaintained for a long time. I personally suggest using the [Proxmark3 Iceman fork](https://github.com/RfidResearchGroup/proxmark3))
+本版本提供：
 
-[中文介绍](doc/README/README_zh_CN.md)
+- 与 RRG/Iceman `v4.21611-145-g2bf48a02c` 固件匹配的 Windows 客户端
+- MIFARE Classic 常用读取、写入、擦除和模拟操作
+- `fchk`、`autopwn`、`isen` 和 FM11RF08S 恢复入口
+- Gen2 CUID/FUID/UFUID 写入、擦除和 UFUID 永久锁卡确认
+- 原始命令界面，可使用未制作成独立按钮的 RRG 客户端命令
 
-***
+## 兼容版本
 
-## Features
+配套组件必须保持一致：
 
-+ Easy to find available Serial Port
-+ Support raw commands of Proxmark3 client(Official/Iceman)
-+ Have a friendly UI to test Mifare cards
-    + Support different card size(MINI, 1K, 2K, 4K)
-    + Easy to edit Mifare block data
-    + Easy to read all/selected blocks with well-designed read logic
-    + Easy to write all/selected blocks
-    + Support binary(.bin .dump) files and text(.eml) files
-    + Analyze Access Bits
-    + Support Chinese Magic Card
-+ Have basic support for LF commands
-+ Customize UI  
-+ ...  
+| 组件 | 版本 |
+| --- | --- |
+| GUI | `Proxmark3GUI v0.2.16` |
+| Windows 客户端 | `v4.21611-145-g2bf48a02c` |
+| Bootrom / OS | `v4.21611-145-g2bf48a02c` |
+| 源码校验值 | `c92e2128b` |
 
-***
+固件包是为 **Proxmark3 RDV4、AT91SAM7S512（512 KB）** 编译的。不要刷入其他硬件型号。RRG 上游更新后，需要同时重新编译 Windows 客户端和固件；仅升级其中一项会再次出现版本不匹配警告。
 
-## Preview
-![preview](doc/README/preview.png)  
+## 下载
 
-[more previews](doc/preview/previews.md)  
+从 [Releases](https://github.com/ZhXllIN/Proxmark3GUI/releases/tag/v0.2.16-rrg-v4.21611) 下载：
 
-***
+- `Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip`
+- `proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c.zip`
 
-## About Compiled Windows clients
+文件校验值：
 
-A cool guy [Gator96100](https://github.com/Gator96100) creates [ProxSpace](https://github.com/Gator96100/ProxSpace) and makes it possible to compile both the firmware and the client on Windows.  
-Also, he makes the [pre-compiled Windows client](https://www.proxmarkbuilds.org/) so you can download it and run your PM3 client on Windows instantly.  
-I included his compiled client in my releases so you can use the GUI on the fly, and you can also use the GUI with your prefered client.  
-Great thanks to him.  
-
-***
-
-## Download binaries for Windows 
-You can download pre-built Windows binaries in [release](https://github.com/wh201906/Proxmark3GUI/releases) page  
-`Vx.x.x-win64.7z` only contains the GUI  
-`Vx.x.x-win64-xxxxxxx.7z` contains the GUI and corresponding client. You just need to open `Vx.x.x-win64-xxxxxxx\GUI\Proxmark3GUI.exe`  
-
-You can also download them in SourceForge  
-[![Download Proxmark3GUI](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/proxmark3gui/files/latest/download)  
-
-## Build on Linux
-```
-cd ~
-sudo apt-get update
-sudo apt-get install git build-essential
-sudo apt-get install qt5-default libqt5serialport5-dev
-git clone https://github.com/wh201906/Proxmark3GUI.git --depth=1
-cd Proxmark3GUI
-mkdir build && cd build
-qmake ../src
-make -j4 && make clean
-./Proxmark3GUI
+```text
+056c39269ebcfcdd612583e5c8ee72ee180e7c2bfe625edfc02405b2489a7b5d  Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip
+d7be757cac71c6a21b8b56ddec40304314f8649ae34b4137d586b212104cc87b  proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c.zip
 ```
 
-## Build on macOS
+## 刷入固件
+
+以下步骤适用于 Windows PowerShell。
+
+1. 确认设备确实是 Proxmark3 RDV4、AT91SAM7S512。
+2. 完整解压 GUI ZIP 和固件 ZIP，不要直接在压缩包内运行文件。
+3. 连接 Proxmark3，关闭正在使用设备串口的 GUI 或其他客户端。
+4. 在设备管理器中确认串口号，例如 `COM5`。
+5. 在两个解压目录的共同父目录打开 PowerShell，执行下列命令。把 `COM5` 换成实际串口号。
+
+```powershell
+$gui = (Resolve-Path '.\Proxmark3GUI-v0.2.16-rrg-v4.21611-matched').Path
+$firmware = (Resolve-Path '.\proxmark3-firmware-rdv4-v4.21611-145-g2bf48a02c').Path
+$env:PATH = "$gui\client\libs;$env:PATH"
+
+& "$gui\client\proxmark3.exe" COM5 --flash --unlock-bootloader `
+  --image "$firmware\bootrom.elf" `
+  --image "$firmware\fullimage.elf"
 ```
-cd ~
-brew update
-brew install qt@5
-brew link qt5 --force
-git clone https://github.com/wh201906/Proxmark3GUI.git --depth=1
-cd Proxmark3GUI
-mkdir build && cd build
-qmake ../src
-make -j4 && make clean
-open Proxmark3GUI.app
+
+刷写期间不要断开 USB。`--unlock-bootloader` 允许写入 Bootrom，只能用于确认匹配的 RDV4 固件。如果客户端无法让设备进入 Bootloader，请断开 USB，按住设备按钮重新连接，再执行同一命令。
+
+刷写完成后重新连接设备并验证版本：
+
+```powershell
+& "$gui\client\proxmark3.exe" COM5 -c 'hw version'
 ```
 
-> In order for the GUI to connect to the device in macOS, you'd need to tweak the settings a little bit
+客户端、Bootrom 和 OS 应全部显示 `v4.21611-145-g2bf48a02c`，且不应出现版本不匹配警告。
 
-Client Path must be path to pm3 console client like "/usr/local/bin/pm3/"
+## 使用 GUI
 
-![macOS_settings](doc/README/macOS_settings.png)
+1. 完整解压 `Proxmark3GUI-v0.2.16-rrg-v4.21611-matched.zip`。
+2. 双击 `启动Proxmark3GUI.bat`。
+3. 在 GUI 中选择设备串口并连接。
+4. MIFARE Classic 常用操作可直接使用对应页面；其他 RRG 命令可在原始命令页面执行。
 
-***
+发布包使用相对路径，已经包含匹配的 `proxmark3.exe`、运行库、资源、字典和 RRG v4.21611 配置。请保持压缩包内的目录结构，不要只复制 `Proxmark3GUI.exe`。
 
-## Tutorial
+## 操作提醒
 
-[1.Quickstart](doc/tutorial/Quickstart/quickstart.md)  
-[2.Work with ProxSpace](doc/tutorial/Work_With_ProxSpace/work_with_proxspace.md)  
-[3.Edit Mifare Classic data](doc/tutorial/Edit_Mifare_Classic_data/Edit_Mifare_Classic_data.md)(Proxmark3 hardware is not necessary)  
+- 仅操作你拥有或明确获授权测试的卡片和系统。
+- 写入、擦除和永久锁卡前先保存卡片备份。
+- UFUID 永久锁卡不可逆，确认数据正确并验证可用后再执行。
+- 固件更新不会替代卡片数据备份。
 
-***
+## 源码
 
-## Change Log
-[Change Log](CHANGELOG.md)
+- 本修改版：[ZhXllIN/Proxmark3GUI](https://github.com/ZhXllIN/Proxmark3GUI)
+- 原 GUI 项目：[wh201906/Proxmark3GUI](https://github.com/wh201906/Proxmark3GUI)
+- RRG 固件和客户端：[RfidResearchGroup/proxmark3](https://github.com/RfidResearchGroup/proxmark3)
+
+项目许可证见 [LICENSE](LICENSE)。
